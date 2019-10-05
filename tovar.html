@@ -81,13 +81,13 @@
       <div class="row">
           <div class="col-7"></div>
            <div class="col-5" style="text-align: right">
-            <button style="width: 140px; height: 30px; border-radius: 5px 5px 5px 5px; background-color: white; font-size: 14px; font-weight: bold; margin-top: 5px">КАТАЛОГ</button>
+            <button style="width: 140px; height: 30px; border-radius: 5px 5px 5px 5px; background-color: white; font-size: 14px; font-weight: bold; margin-top: 5px; margin-bottom: 4px" onclick="openbox('box'); return false">КАТАЛОГ</button>
           </div>
       </div>
   </div>
   
   
-  <div class="container-fluid" style="background-color: rgba(119, 136, 152, 1); border-radius: 0 0 50px 50px">
+  <div id="box" class="container-fluid" style="display: none; background-color: rgba(119, 136, 152, 1); border-radius: 0 0 50px 50px">
       <div class="row" style="vertical-align: center; margin-bottom: 5px">
           <div style="background-color: white; height: 100px; width: 100px; border-radius: 50px 50px 50px 50px; margin-left: 10px; text-align: center; margin-right: auto">
             <img src="img/block.png" style="height: 90px; padding-top: 15px">
@@ -140,7 +140,7 @@
       
       <div class="row" style="vertical-align: center; margin-bottom: 5px">
           <div style="background-color: white; height: 100px; width: 100px; border-radius: 50px 50px 50px 50px; margin-left: 10px; text-align: center; margin-right: auto">
-            <img src="" style="height: 90px; padding-top: 15px">
+            <img src="img/stroi.png" style="height: 90px; padding-top: 15px">
           </div>
           <div class="col-8" style="background-color: white; height: 50px; border-radius: 25px 0 0 25px; text-align: right; margin-top: 25px">
               <a>Строительные материалы</a>
@@ -170,7 +170,7 @@
       
       <div class="row" style="vertical-align: center; margin-bottom: 5px">
           <div style="background-color: white; height: 100px; width: 100px; border-radius: 50px 50px 50px 50px; margin-left: 10px; text-align: center; margin-right: auto">
-            <img src="img/yrna.png" style="height: 90px; padding-top: 15px">
+            <img src="img/plitka1.png" style="height: 90px; padding-top: 15px">
           </div>
           <div class="col-8" style="background-color: white; height: 50px; border-radius: 25px 0 0 25px; text-align: right; margin-top: 25px">
               <a>Фасадная плитка</a>
@@ -178,21 +178,21 @@
           </div>
       </div>
       
-      <div class="row" style="vertical-align: center; margin-bottom: 5px">
+      <div class="row" style="vertical-align: center; padding-bottom: 30px">
           <div style="background-color: white; height: 100px; width: 100px; border-radius: 50px 50px 50px 50px; margin-left: 10px; text-align: center; margin-right: auto">
-            <img src="img/yrna.png" style="height: 90px; padding-top: 15px">
+            <img src="img/plitka2.png" style="height: 90px; padding-top: 15px">
           </div>
           <div class="col-8" style="background-color: white; height: 50px; border-radius: 25px 0 0 25px; text-align: right; margin-top: 25px">
               <a>Декоративная плитка</a>
              <img src="img/str.svg" style="padding-top: 13px">
           </div>
       </div>
-      <div class="container-fluid">
+      <!--<div class="container-fluid">
           <div class="row" style="text-align: center; width: 200px; margin: auto; padding-top: 30px">
               <img src="img/str.svg" style="transform: rotate(270deg)"><br>
               <a>свернуть каталог</a>
           </div>
-      </div>
+      </div>-->
   </div>
   
    <!-- конец котолога товаров-->
@@ -202,10 +202,11 @@
    <div class="container-fluid">
        <div class="row">
            <div class="col-12" style="padding-top: 20px; align-content: center; text-align: center">
-               <a style="font-size: 18px; font-weight: bold">Строиматериалы по заводским ценам<br>всего в 4 этапа!</a><br>
-               <img src="img/tap1.png" style="width: 100px; height: 100px;"><br>
-               <div style="text-align: left; width: 325px; height: 68px; top: 0; right: 0; bottom: 0; left: 0; margin:auto"><a style="font-size: 14px">Связываетесь с нашей компанией по<br> телефону 89113415444 или оставьте свои<br> контактные данные что бы менеджер смог с Вами связаться.</a></div><br>
-                     <div style="width: 345px; margin: auto; padding-top: 10px; text-align: right">
+               <a style="font-size: 18px; font-weight: bold">Остались вопросы?</a><br>
+               <div style="text-align: left; width: 350px; height: 68px; top: 0; right: 0; bottom: 0; left: 0; margin:auto"><a style="font-size: 14px">Связываетесь с нашей компанией по<br> телефону 89113415444 или оставьте свои<br> контактные данные что бы менеджер смог с Вами связаться.</a></div><br>
+                    <div style="width: 425; margin: auto">
+                    <div style="width: 200px; display: inline-block"><img src="img/dis.png" style="width: 180px"></div>
+                     <div style="width: 150px; margin: auto; text-align: right; display: inline-block; vertical-align: middle">
                       <form method="POST">
 
                         <!-- Hidden Required Fields -->
@@ -214,12 +215,13 @@
                         <input type="hidden" name="form_subject" value="Клиент">
                         <!-- END Hidden Required Fields -->
 
-                        <input type="text" name="Name" placeholder="ИМЯ" required style="width: 139px; height: 30px; border-radius: 5px 5px 5px 5px; text-align: center; background-color: rgba(196, 196, 196, 1); color: rgba(119, 136, 152, 1); font-size: 14px; font-weight: bold">
-                        <input type="text" name="Phone" placeholder="ТЕЛЕФОН" style="width: 193px; height: 30px; border-radius: 5px 5px 5px 5px; text-align: center; background-color: rgba(196, 196, 196, 1); color: rgba(119, 136, 152, 1); font-size: 14px; font-weight: bold"><br>
+                        <input type="text" name="Name" placeholder="ИМЯ" required style="width: 140px; height: 30px; border-radius: 5px 5px 5px 5px; text-align: center; background-color: rgba(196, 196, 196, 1); color: rgba(119, 136, 152, 1); font-size: 14px; font-weight: bold"><br>
+                        <input type="text" name="Phone" placeholder="ТЕЛЕФОН" style="width: 140px; height: 30px; border-radius: 5px 5px 5px 5px; text-align: center; background-color: rgba(196, 196, 196, 1); color: rgba(119, 136, 152, 1); font-size: 14px; font-weight: bold; margin-top: 5px"><br>
                         <button style="width: 140px; height: 30px; border-radius: 5px 5px 5px 5px; background-color: rgba(249, 224, 132, 1); font-size: 14px; font-weight: bold; margin-top: 5px">ОТПРАВИТЬ</button>
 
                     </form>
                    </div>
+               </div>
            </div>
        </div>
    </div>
@@ -227,7 +229,7 @@
    
    <div class="container-fluid">
        <div class="row">
-           <img src="https://i.gifer.com/OvOt.gif">
+           <img src="img/gif2.gif" width="100%">
        </div>
    </div>
    
@@ -288,7 +290,7 @@
   
 <!--youtube-->
   <div class="container" style="width: 400px; height: 380px; align-content: center">
-      <div style="position: absolute; padding-top: 350px; padding-left: 290px"><img style="width: 30px" src="img/finger.png"></div>
+      <div style="position: absolute; padding-top: 350px; padding-left: 290px"></div>
         <div style="text-align: center; padding-top: 10px; padding-bottom: 10px">
              <img src="img/youtube.png" style="width: 100%; padding-bottom: 10px">
               <iframe width="96%" height="230px" src="https://www.youtube.com/embed/nN661B0Nho8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -325,7 +327,7 @@
          </div>
          <div class="col-sm-12" style="padding-bottom: 10px; padding-top: 20px; text-align: right"><a href="" style="color: white">xочу прочитать</a></div>
      </div>
-     <div class="row" style="align-content: center; background-color: rgba(119, 136, 152, 1); margin-bottom: 30px; pad">
+     <div class="row" style="align-content: center; background-color: rgba(119, 136, 152, 1); margin-bottom: 30px">
          <div class="col-sm-12">
             <img src="img/post3.jpg" style="width: 100%; padding-bottom: 10px; padding-top: 20px"><br>
             <a style="font-size: 18px">Текст заглавия статьи о строительстве</a>
@@ -349,21 +351,36 @@
     </div>
     <div class="row" style="height: 200px; margin-top: 20px">
         
-            <div class="col-8" style="font-size: 18px; font-weight: bold; padding-top: 30px">
+            <div class="col-9" style="font-size: 18px; font-weight: bold; padding-top: 30px">
                 <a>Phone:  8 (921) 027 0553</a><br>
                 <a>Mail:  ASM.mail.ru</a><br>
-                <a>Addres:  V. Novgorod </a>
+                <a>Addres:  V. Novgorod </a><br>
+                
             </div>
-            <div class="col-4" style="text-align: right">
+            <div class="col-3" style="text-align: right">
                 <img src="img/facebook.svg" width="50" style="padding-bottom: 10px"><br>
                 <img src="img/twitter.svg" width="50" style="padding-bottom: 10px"><br>
                 <img src="img/vk.svg" width="50" style="padding-bottom: 10px">
             </div>
     
     </div>
+    <div class="row">
+       <div class="col-12">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A671ab08a21206b0b5120f2ce6e3f8cd542890f2d152469e1f04a73208b8cacf9&amp;source=constructor" width="320" height="240" frameborder="0"></iframe>
+        </div>
+    </div>
 </div> 
    
-  
+  <script>
+      function openbox(box) {
+    displey = document.getElementById(box).style.display;
+    if(displey == "none") {
+        document.getElementById('box').style.display = "block";
+    } else {
+        document.getElementById('box').style.display = "none";
+    }
+}
+      </script>
    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
